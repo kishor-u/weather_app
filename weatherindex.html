@@ -1,0 +1,100 @@
+<!-- Weather App -->
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Weather Forecast</title>
+	<link rel="icon" href="ico.png">
+	<script type="text/javascript" src="countrylist.json"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="weatherscript.js"></script>
+	<link rel="stylesheet" type="text/css" href="weather.css">
+
+</head>
+
+
+<body ng-app="myApp" ng-controller="myController">
+
+
+
+
+<div id="title">
+	<h2><b>Weather Updates</b></h2><br/><br/>
+    Enter the city Name :&nbsp;<input type="text" ng-model="cityName" ng-minlength="1"><br/>  <br/>
+
+
+    <table class="search" ng-show="cityName">
+  		<tr ng-repeat="x in result | filter : {'name' : cityName} | limitTo : 5"">
+    	<td>{{ x.name }}</td>
+  		</tr>
+	</table>
+	<br/>
+
+	
+    <input type="submit" ng-click="myFunction(cityName)" ng-model="submit"> <br/><br/>  
+    <div id="error" ng-bind="displayerror"></div>
+    <br/><br/><br/><br/><br/><i>Explore the weather updates<br/>
+    for past 3 dayzz... !!!!</i>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="frontcover">
+	<h2 >{{obj.city.name}}</h2> 
+	<h3>{{obj.city.country}}</h3>
+	<h3>{{obj.city.coord.lat}},&nbsp;{{obj.city.coord.lon}}</h3>
+	 <p>{{ clock | date:'medium'}}</p>
+ 	 <p>Humidity : {{obj.list[0].main.humidity}} %</p>
+ 	 <p>Temperature : {{obj.list[0].main.temp - 273.15 | number : 2}} </p>
+ 	 <p>Wind speed : {{obj.list[0].wind.speed}}</p>
+ 	 <span>{{obj.list[0].dt*1000 | date }}</span>
+
+     <div id="day1">
+     	 
+	 	 <p>Humidity : {{obj.list[8].main.humidity}} %</p>
+	 	 <p>Temperature : {{obj.list[8].main.temp - 273.15 | number : 2}} </p>
+	 	 <p style="text-transform : capitalize">Wind speed : {{obj.list[8].wind.speed}},&nbsp;{{obj.list[8].weather[0].description }} </p>
+
+	 	 <div id="dateday1">
+	 	 	<span>{{obj.list[8].dt*1000 | date }}</span>
+	 	 </div>
+     </div>
+
+     <div id="day2">
+     	 
+	 	 <p>Humidity : {{obj.list[16].main.humidity}} %</p>
+	 	 <p>Temperature : {{obj.list[16].main.temp - 273.15 | number : 2}} </p>
+	 	 <p style="text-transform : capitalize">Wind speed : {{obj.list[16].wind.speed}},&nbsp;{{obj.list[8].weather[0].description }} </p>
+	 	 <div id="dateday2">
+	 	 	<span>{{obj.list[16].dt*1000 | date}}</span>
+	 	 </div>
+     </div>
+
+     <div id="day3">
+         
+	 	 <p>Humidity : {{obj.list[24].main.humidity}} %</p>
+	 	 <p>Temperature : {{obj.list[24].main.temp - 273.15 | number : 2}} </p>
+	 	 <p style="text-transform : capitalize">Wind speed : {{obj.list[24].wind.speed}},&nbsp;{{obj.list[8].weather[0].description }} </p>
+	 	 <div id="dateday3">
+	 	 	<span>{{obj.list[24].dt *1000 | date}}</span>
+	 	 </div>
+     </div>
+
+</div>
+
+</body>
+
+
+
+</html>

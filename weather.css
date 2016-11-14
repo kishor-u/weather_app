@@ -1,0 +1,121 @@
+ body
+ {
+ 	background: url(1.jpg);
+ 	
+ }
+ #error
+ {
+ 	position:relative;
+ 	left:20%;
+  	color:red;
+  	text-decoration: bold;
+ }
+.search
+{
+	position: relative;
+	left: 45%;
+}
+ #frontcover
+ {
+ 	background:white;
+ 	height:416px;
+ 	width:700px;
+ 	position: absolute;
+ 	left:500px;
+ 	top:150px;
+ 	opacity:.5;	
+ 	border-radius:7px;
+ 	padding-top: 15px;
+ 	padding-left: 15px;
+ }
+ #frontcover:hover
+ {
+ 	opacity:.8;
+ }
+ #title
+ {
+ 	color:white;
+    position: absolute;
+    left:100px;
+    top:80px;
+ 	 
+ }
+ input
+ {
+ 	background:#D3E5E7;
+ 	text-align: center;
+ 	font-weight: bold; 
+ 	text-transform: capitalize;
+ }
+ input[type=submit]
+ {
+ 	background:grey;
+ 	border-radius: 2px;
+ 	position:absolute;
+ 	left:150px;
+ }
+ h2
+ {
+ 	font-weight: bold;
+ }
+ #day1
+ {
+ 	position: absolute;
+ 	bottom: 280px;
+ 	padding: 4px  4px;
+ 	left:270px;
+ 	border-radius: 8px;
+ 	height: 100px;
+ 	width: 400px;
+ 	background: #B7CA9E;
+
+ }
+
+ 
+#day2
+ {
+ 	position: absolute;
+ 	bottom: 150px;
+ 	padding: 4px  4px;
+ 	left:270px;
+ 	border-radius: 8px;
+ 	height: 100px;
+ 	width: 400px;
+ 	background: #B7CA9E;
+ }
+ #day3
+ {
+ 	position: absolute;
+ 	bottom: 20px;
+ 	padding: 4px  4px;
+ 	left:270px;
+ 	border-radius: 8px;
+ 	height: 100px;
+ 	width: 400px;
+ 	background: #B7CA9E;
+ }
+
+ #dateday1
+ {
+ 	
+ 	position: relative;
+ 	bottom: 70px;
+ 	left:200px;
+ 	font-weight: bold;
+ }
+ #dateday2
+ {
+ 
+ 	position: relative;
+ 	bottom: 70px;
+ 	left:200px;
+ 	font-weight: bold;
+ }
+ #dateday3
+ {
+ 	
+ 	position: relative;
+ 	bottom: 70px;
+ 	left:200px;
+    font-weight: bold; 	
+ }
